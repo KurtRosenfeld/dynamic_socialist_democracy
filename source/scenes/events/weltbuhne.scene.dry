@@ -21,6 +21,7 @@ The <span style="color: #c00000;">left-wing</span> news and literary magazine We
 - @drop_case: Drop the case.
 - @let_persecute: Let justice take its course.
 - @pressure_drop: Pressure our coalition partners to drop the case.
+- @protest: We must start a campaign on the streets.
 - @nothing: There is nothing we can do.
 
 @drop_case
@@ -48,8 +49,13 @@ We have pressured the Justice Ministry to drop the case against the Weltbühne, 
 
 The Western powers and all countries that feel threatened by German militarism are pleased that we have turned a chapter in our history. On the other hand, the Reichswehr disapproves of dropping the case.
 
+@protest
+on-arrival: dvp_relation -= 5; nationalism -= 2; socialism += 3; east_relation += 2; pacifism += 1; left_dissent -= 20; weltbuhne_contested = 1
+
+Things will continue to develop...
+
 @nothing
 view-if: not spd_in_government
-on-arrival: weltbuhne_dropped = 0; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4
+on-arrival: weltbuhne_dropped = 0; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1;
 
 The case progresses slowly, given the military secrets involved, and there will be no determination made for a while. However, the affair has made the Western powers suspicious of our resurgent militarism.
