@@ -2580,7 +2580,6 @@ max-cards: 4
 
 - @party
 - @govt
-- @rerevolution
 - @eco
 - @time
 - @time_2
@@ -2603,12 +2602,6 @@ is-deck: true
 
 - #govt_affairs
 
-@rerevolution
-title: Second Revolution
-card-image: SPD_logo.jpg
-is-deck: true
-
-- #second_revolution
 
 @time
 title: Bide our Time
