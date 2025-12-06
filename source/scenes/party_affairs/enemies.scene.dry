@@ -40,7 +40,7 @@ on-arrival: enemies = "KPD"; reformist_strength += 8; left_dissent += 8; reformi
 
 Attacking the <span style="color: #191919;">**Anarchists**</span> wins us some measure of approval among the bourgeois parties.
 
-@allparties:
+@allparties
 on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; reformist_dissent += 1; workers_z -= 3; new_middle_dvp -= 2; workers_dvp -= 1; workers_ddp -= 0.5; workers_ddp -= 0.5 if not dvp_exist; coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1;  workers_dnvp -= 1 if dnvp_ideology == "Radical"; workers_nsdap -= 3; unemployed_nsdap -= 2; new_middle_dnvp -= 2
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
