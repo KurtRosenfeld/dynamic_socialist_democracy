@@ -592,13 +592,6 @@ if (Q.year >= 1932) {
 // not sure why seats decreased from 450 to 423 between 1928 and 1932, considering the turnout vastly increased
 
 !}
-on-display: {!
-data = [{
-    "id": "kpd",
-    "legend": "KPD",
-    "name": "KPD",
-    "seats": Math.round(Q.kpd_r_prussia * Q.landtag_size),
-}];
 
 if (Q.sapd_formed && Q.sapd_r_prussia) {
     data.push({
