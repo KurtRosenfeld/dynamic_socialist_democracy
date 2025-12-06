@@ -49,7 +49,6 @@ if (Q.year == 1928) {
     var adjustment_factors = {
         spd: 0.98,
         sapd: 0.6,
-        kpd: 1.1,
         ddp: 0.95,
         lvp: 0.97,
         z: 1.02,
@@ -64,7 +63,6 @@ if (Q.year == 1928) {
     var adjustment_factors = {
         spd: 0.97,
         sapd: 0.8,
-        kpd: 1.08,
         ddp: 0.95,
         lvp: 0.96,
         z: 1.02,
@@ -79,7 +77,6 @@ if (Q.year == 1928) {
     var adjustment_factors = {
         spd: 0.95,
         sapd: 1.0,
-        kpd: 1.05,
         ddp: 0.95,
         lvp: 0.95,
         z: 1.02,
@@ -94,7 +91,6 @@ if (Q.year == 1928) {
     var adjustment_factors = {
         spd: 0.95,
         sapd: 1.0,
-        kpd: 1.05,
         ddp: 0.95,
         lvp: 0.95,
         z: 1.02,
@@ -109,7 +105,6 @@ if (Q.year == 1928) {
     var adjustment_factors = {
         spd: 0.95,
         sapd: 1.3,
-        kpd: 1.0,
         ddp: 0.95,
         lvp: 1.0,
         z: 1.02,
@@ -124,7 +119,6 @@ if (Q.year == 1928) {
     var adjustment_factors = {
         spd: 0.95,
         sapd: 1.5,
-        kpd: 1.0,
         ddp: 0.95,
         lvp: 1.0,
         z: 1.02,
