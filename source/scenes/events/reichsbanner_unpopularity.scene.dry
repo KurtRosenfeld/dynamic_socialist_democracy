@@ -1,5 +1,6 @@
 title: Reichsbanner Membership Dwindles
 subtitle: Our unpopularity has impaired the Reichsbanner's recruitment ability.
+view-if: workers_dvp >= 20
 new-page: true
 tags: event
 on-display: {!  
