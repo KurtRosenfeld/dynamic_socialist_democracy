@@ -27,8 +27,6 @@ We have somehow antagonized the parties involved in the <span style="color: #000
 - @center_right_coalition
 - @bourgeois_coalition
 - @bourgeois_coalition_kvp
-- @left_coalition
-- @progressive_coalition
 - @new_elections: New elections will be called.
 
 
@@ -102,32 +100,8 @@ Letting go the democratic bulwark to the right-wing parties is deeply unpopular 
 
 [? if z_leader != "Stegerwald": Adam Stegerwald?][? if z_leader == "Stegerwald": Heinrich Brüning?] of the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] is selected to be the Minister-President of Prussia.
 
-@left_coalition
-title: Is a United Left coalition possible?
-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> [? if sapd_formed: + <span style="color: #9B0000;">**SAPD**</span> ?] ([+ left_coalition_prussia +]%)
-unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #700000;">KPD</span> [? if sapd_formed: + <span style="color: #9B0000;">SAPD</span> ?] ([+ left_coalition_prussia +]%). [? if kpd_relation < 50 : We do not have adequate relations with the <span style="color: #700000;">KPD</span>. ?][? if communist_coalition < 3 : The <span style="color: #700000;">Communists</span> are too committed to their radical ways to partake in government. ?] [? if (president_ideology == "Right" or president == "Hindenburg") and not presidential_powers: [+ president +] will perform a <i>Reichsexekution</i> upon our government. ?] [? if reformist_strength >= left_strength: Our own Prussian party has ruled out this possibility. ?]
-view-if: left_coalition_prussia >= 50
-choose-if: (kpd_relation >= 50 or (kpd_leader == "Conciliators" and kpd_relation >= 40)) and communist_coalition >= 3 and ((president_ideology != "Right" and president != "Hindenburg") or presidential_powers) and left_strength >= reformist_strength
-on-arrival: in_left_front_prussia = 1; prussia_leader = "Rosenfeld"; reichswehr_loyalty -= 0.05; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 3; liberal_cooperation += 5; bourgeois_cooperation += 10; kpd_relation += 10; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 8; dvp_relation -= 8; coup_progress += 2; coup_progress += 1 if in_left_front; capital_strike_progress += 2; capital_strike_progress += 1 if in_left_front; reformist_dissent += 25; reformist_strength -= 15; left_dissent -= 15; left_strength += 15; prussian_police_loyalty -= 0.1; rfb_strength += 50; rfb_militancy += 0.05; spd_prussia = 1
-
-Somehow, surprisingly, the left coalition is successfully formed, without appointing a <span style="color: #700000;">communist</span> as Minister-President. The consensus choice for Minister-President, accepted by the <span style="color: #c00000;">**SPD**</span>, <span style="color: #700000;">**KPD**</span>, is[? if left_split == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if left_split == 0: belongs?][? if left_split == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #700000;">**KPD**</span> members through his work..
-
-In response to the <span style="color: #700000;">**KPD**</span>'s entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that our government will be unstable and incompetent, and will collapse of its own accord, eventually enabling the destruction of the <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Republic. [? if in_left_front: The right will be more active in resisting our rule considering we are also ruling with the <span style="color: #700000;">**KPD**</span> on the federal level too. ?]
-
-- @prussia_election_1928.kpd_goals_prussia: The <span style="color: #700000;">**KPD**</span> presents us with a list of demands.
-
-@progressive_coalition
-title: Is a progressive coalition possible?
-subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> + <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?] ([+ progressive_coalition_prussia +]%)
-view-if: ddp_relation >= 60 and ddp_ideology == "Left" and ((kpd_relation >= 60 and kpd_leader == "Thälmann") or (kpd_relation >= 40 and kpd_leader == "Conciliators")) and not lvp_formed
-unavailable-subtitle: <span style="color: #c00000;">SPD</span> + <span style="color: #700000;">KPD</span> + <span style="color: #D3C24D;">[+ ddp_name +]</span>[? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">SAPD</span>?] ([+ progressive_coalition_prussia +]%) - Secret mode needs to be enabled.
-choose-if: secret_mode = 1
-on-arrival: workers_spd *= 100; workers += 1000; super_secret_mode = 1; prussia_leader = "joavig"
-
-Super secret mode has been enabled. Shoutout to "joavig" for being the first one to achieve this, on April 29, 2025.
-
 @new_elections
-on-arrival: pro_republic -= 5; rural_spd -= 4; new_middle_spd -= 4; old_middle_spd -= 4; workers_spd -= 3; rural_nsdap += 4; new_middle_nsdap += 4; old_middle_nsdap += 4; workers_nsdap += 3
+on-arrival: pro_republic -= 1; rural_spd += 1;workers_spd += 2; old_middle_nsdap += 3
 call: set_next_election_time_prussia
 
 No coalition is able to be formed, forcing [+ prussia_leader +] to call new elections, with the extremist parties likely to benefit from.
