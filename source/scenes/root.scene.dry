@@ -245,8 +245,8 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
-Q.parties_graph = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['spd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties_graph = ['spd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 Q.sapd_formed = 0;
 Q.dnf_formed = 0;
@@ -456,7 +456,6 @@ Q.cvp_left = 0;
 
 Q.adjustmentFactors_spd = 1.0;
 Q.adjustmentFactors_sapd = 1.0;
-Q.adjustmentFactors_kpd = 1.0;
 Q.adjustmentFactors_z = 1.0;
 Q.adjustmentFactors_ddp = 1.0;
 Q.adjustmentFactors_dvp = 1.0;
@@ -470,7 +469,6 @@ Q.adjustmentFactors_other = 0.75;
 
 Q.adjustmentFactors_votes_spd = 1.0;
 Q.adjustmentFactors_votes_sapd = 1.0;
-Q.adjustmentFactors_votes_kpd = 1.0;
 Q.adjustmentFactors_votes_z = 1.0;
 Q.adjustmentFactors_votes_ddp = 1.0;
 Q.adjustmentFactors_votes_dvp = 1.0;
@@ -484,7 +482,6 @@ Q.adjustmentFactors_votes_other = 1.0;
 
 Q.adjustmentFactors_spd_prussia = 1.0;
 Q.adjustmentFactors_sapd_prussia = 1.0;
-Q.adjustmentFactors_kpd_prussia = 1.0;
 Q.adjustmentFactors_z_prussia = 1.0;
 Q.adjustmentFactors_ddp_prussia = 1.0;
 Q.adjustmentFactors_dvp_prussia = 1.0;
@@ -496,7 +493,7 @@ Q.adjustmentFactors_dnef_prussia = 1.0;
 Q.adjustmentFactors_kvp_prussia = 1.0;
 Q.adjustmentFactors_other_prussia = 0.7;
 
-// array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
+// array of objects of the form {date: Date(), spd: 10, ...} for each election
 Q.election_records = [];
 // party support records for every month
 Q.party_support_records = [];
