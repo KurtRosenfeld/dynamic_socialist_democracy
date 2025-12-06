@@ -63,16 +63,16 @@ Q.dissent_percent = 5;
 // factions
 Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist', 'social_patriot'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
+Q.left_strength = 35;
+Q.left_dissent = 0;
+Q.center_strength = 40;
 Q.center_dissent = 0;
 Q.labor_strength = 25;
 Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.reformist_strength = 5;
+Q.reformist_dissent = 25;
+Q.neorevisionist_strength = 0;
+Q.neorevisionist_dissent = 00;
 Q.social_patriot_strength = 0
 Q.social_patriot_dissent = 0;
 
@@ -122,15 +122,13 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
+Q.ddp_relation = 50;
+Q.dvp_relation = 15;
 // DNVP and NSDAP are invariably hostile
 Q.dnvp_relation = 5;
 Q.nsdap_relation = 0;
 Q.lvp_relation = 0;
 
-Q.kpd_leader = "Thälmann";
 Q.z_leader = "Marx";
 Q.z_ideology = "Right";
 Q.cvp_ideology = "Moderate";
@@ -150,8 +148,8 @@ Q.prussia_leader = "Braun"
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
+Q.rb_strength = 2500;
+Q.rb_militancy = 0.5;
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
 Q.sh_strength = 500;
@@ -169,16 +167,16 @@ Q.rfb_banned_prussia = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
-Q.interior_police_loyalty = 0.45;
+Q.interior_police_loyalty = 0.4;
 
 Q.prussian_police_strength = 90;
 Q.prussian_police_militancy = 2;
-Q.prussian_police_loyalty = 0.5;
+Q.prussian_police_loyalty = 0.4;
 
 // strength includes actual military and de facto reserves?
-Q.reichswehr_strength = 100;
-Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.reichswehr_strength = 50;
+Q.reichswehr_militancy = 2;
+Q.reichswehr_loyalty = 0.1;
 
 // The state of the country
 
@@ -215,13 +213,13 @@ Q.budget = 4;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
+Q.workers = 53; // industry and trade
+Q.old_middle = 9; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
+Q.new_middle = 12; // "new mittelstand"
+Q.rural = 27; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
+Q.unemployed = 5.6;
 Q.catholics = 30;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
@@ -259,8 +257,7 @@ Q.cvp_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 55;
-Q.workers_kpd = 22;
+Q.workers_spd = 77;
 Q.workers_z = 5;
 Q.workers_ddp = 2;
 Q.workers_dvp = 0;
@@ -268,8 +265,7 @@ Q.workers_dnvp = 6;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
-Q.new_middle_spd = 8;
-Q.new_middle_kpd = 1;
+Q.new_middle_spd = 9;
 Q.new_middle_z = 10;
 Q.new_middle_ddp = 23;
 Q.new_middle_dvp = 22;
@@ -278,7 +274,6 @@ Q.new_middle_nsdap = 4;
 Q.new_middle_other = 22;
 
 Q.old_middle_spd = 4;
-Q.old_middle_kpd = 0;
 Q.old_middle_z = 6;
 Q.old_middle_ddp = 10;
 Q.old_middle_dvp = 27;
@@ -287,7 +282,6 @@ Q.old_middle_nsdap = 9;
 Q.old_middle_other = 20;
 
 Q.rural_spd = 9;
-Q.rural_kpd = 0;
 Q.rural_z = 5;
 Q.rural_ddp = 4;
 Q.rural_dvp = 15;
@@ -295,8 +289,7 @@ Q.rural_dnvp = 46;
 Q.rural_nsdap = 3;
 Q.rural_other = 16;
 
-Q.unemployed_spd = 21;
-Q.unemployed_kpd = 50;
+Q.unemployed_spd = 71;
 Q.unemployed_z = 1;
 Q.unemployed_ddp = 0;
 Q.unemployed_dvp = 0;
@@ -304,8 +297,7 @@ Q.unemployed_dnvp = 4;
 Q.unemployed_nsdap = 13;
 Q.unemployed_other = 7;
 
-Q.catholics_spd = 21;
-Q.catholics_kpd = 2;
+Q.catholics_spd = 23;
 Q.catholics_z = 49;
 Q.catholics_ddp = 0;
 Q.catholics_dvp = 5;
@@ -326,8 +318,7 @@ Q.catholics_spd_old = 20;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26.5;
-Q.kpd_r = 9.1;
+Q.spd_r = 35.6;
 Q.z_r = 17.8;
 Q.ddp_r = 6.5;
 Q.dvp_r = 10.3;
@@ -342,8 +333,7 @@ Q.reichstag_size = 4.93;
 Q.landtag_size = 4.5;
 
 // diff from prev
-Q.old_spd_r = 26.5;
-Q.old_kpd_r = 9.1;
+Q.old_spd_r = 35.6;
 Q.old_z_r = 13.9;
 Q.old_ddp_r = 6.5;
 Q.old_dvp_r = 10.3;
@@ -353,8 +343,7 @@ Q.old_other_r = 5.9;
 Q.old_bvp_r = 3.9;
 
 // old election votes
-Q.previous_spd_last_election_votes = 26;
-Q.previous_kpd_last_election_votes = 9;
+Q.previous_spd_last_election_votes = 35;
 Q.previous_z_last_election_votes = 17.3;
 Q.previous_ddp_last_election_votes = 6.3;
 Q.previous_dvp_last_election_votes = 10.1;
@@ -382,8 +371,7 @@ Q.previous_nvf_last_election_votes_prussia = 0.0;
 Q.previous_schleicher_dnef_last_election_votes_prussia = 0.0;
 
 // prussian gov right now
-Q.spd_r_prussia = 25.3;
-Q.kpd_r_prussia = 9.8;
+Q.spd_r_prussia = 35.1;
 Q.z_r_prussia = 18.0;
 Q.ddp_r_prussia = 6.0;
 Q.dvp_r_prussia = 10.0;
@@ -392,8 +380,7 @@ Q.nsdap_r_prussia = 2.5;
 Q.other_r_prussia = 4.2;
 
 // diff from prev PRUSSIA
-Q.old_spd_r_prussia = 25.3;
-Q.old_kpd_r_prussia = 9.8;
+Q.old_spd_r_prussia = 35.1;
 Q.old_z_r_prussia = 18.0;
 Q.old_ddp_r_prussia = 6.0;
 Q.old_dvp_r_prussia = 10.0;
@@ -402,8 +389,7 @@ Q.old_nsdap_r_prussia = 2.5;
 Q.old_other_r_prussia = 4.2;
 
 // old election votes PRUSSIA
-Q.previous_spd_last_election_votes_prussia = 24.9;
-Q.previous_kpd_last_election_votes_prussia = 9.6;
+Q.previous_spd_last_election_votes_prussia = 34.5;
 Q.previous_z_last_election_votes_prussia = 17.6;
 Q.previous_ddp_last_election_votes_prussia = 5.9;
 Q.previous_dvp_last_election_votes_prussia = 9.8;
@@ -411,8 +397,7 @@ Q.previous_dnvp_last_election_votes_prussia = 23.7;
 Q.previous_nsdap_last_election_votes_prussia = 2.5;
 Q.previous_other_last_election_votes_prussia = 6.0;
 
-Q.spd_votes = 27.9;
-Q.kpd_votes = 11.4;
+Q.spd_votes = 39.3;
 Q.z_votes = 15.1;
 Q.ddp_votes = 4.7;
 Q.dvp_votes = 8.6;
@@ -543,12 +528,6 @@ Q.in_right_coalition = 0;
 Q.in_weimar_coalition = 0;
 // Grand coalition = SPD + Z + BVP + DDP + DVP
 // also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
-Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
-Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
-Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
 Q.in_spd_majority = 0;
 Q.grand_coalition_failed = 0;
@@ -562,8 +541,6 @@ Q.in_social_liberal_coalition = 0;
 Q.in_right_coalition_prussia = 0;
 Q.in_weimar_coalition_prussia = 1;
 Q.in_grand_coalition_prussia = 0;
-Q.in_popular_front_prussia = 0;
-Q.in_left_front_prussia = 0;
 Q.in_spd_majority_prussia = 0;
 Q.in_center_right_coalition_prussia = 0;
 Q.in_minority_weimar_coalition_prussia = 0;
