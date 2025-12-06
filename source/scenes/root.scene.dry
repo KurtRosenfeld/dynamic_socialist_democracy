@@ -715,8 +715,6 @@ Q.rubicon_timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
     'dealing_with_toleration',
     'constitutional_reform', 'labor_rights', 'spd_government_burden',
     'education_science', 'curriculum',
-    // second revolution
-    'armworkers'
     // events
     'emergency_cuts', 'unemployment_insurance',
     'sa_ban', 'sh_ban', 'papen_chancellor', 'schleicher_chancellor',
@@ -784,8 +782,6 @@ Q.womens_rights_timer = 0;
 Q.homosexual_rights_timer = 0;
 Q.economic_democracy_timer = 0;
 Q.coalition_affairs_timer = 0;
-// second revolution
-Q.armworkers_timer = 0;
 // event timers
 Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
