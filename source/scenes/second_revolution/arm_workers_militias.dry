@@ -1,1 +1,31 @@
-Arms
+title: Arm Workers
+new-page: true
+view-if: armingworkers_timer <= 0
+on-arrival: armingworkers_timer = 10
+is-card: true
+card-image: img/poster_2.jpg
+tags: second_revolution
+
+= Arm Workers
+
+For better or for worse, the party cannot exist without money. Without the support of wealthy industrialists, we depend on membership dues to sustain our efforts.
+
+We receive dues at the end of each year, but can adjust them throughout. Low party dissent can secure more funds, and vice versa.
+
+- @arm
+- @disarm
+- @not
+
+@arm
+on-arrival: workers_spd += 3; resources -=1
+
+gg
+
+@disarm
+on-arrival: workers_spd -= 5; resources +=1
+
+bg
+
+@not
+
+Nothing ever happens
