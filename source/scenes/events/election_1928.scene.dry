@@ -3905,52 +3905,44 @@ go-to: ministries
 
 Rudolf Wissell of the <span style="color: #c00000;">**SPD**</span> has been appointed labor minister.
 
-@interior
+@interior_main
 title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "SPD"
-on-arrival: interior_minister_party = "SPD"; leverage -= 5
+on-arrival: leverage -= 5; interior_minister_party = "SPD"
 go-to: interior_minister_choice
 
-# SUB-SELECTION CARD for Interior Minister choice
 @interior_minister_choice
-title: Interior Minister Selection
-subtitle: Choose who will lead domestic security
+title: Select Interior Minister
 tags: mins_1928
 new-page: true
-  
-We have claimed the Interior Ministry. Now we must choose our minister:
 
-# Option 1: Severing
-@choose_severing
-title: Carl Severing (Reformist)
-subtitle: Experienced SPD moderate - no additional cost
+We have claimed the Interior Ministry for the SPD.
+<br><br>
+<strong>Choose who will lead domestic security:</strong>
+
+@appoint_severing
+title: Carl Severing
+subtitle: Reformist SPD - No additional cost
 choose-if: true
-on-arrival: interior_minister = "Severing"
+on-arrival: interior_minister = "Severing"; moderate_spd_support += 10
 go-to: ministries
 
-Carl Severing has been appointed Interior Minister.
-
-# Option 2: Thälmann
-@choose_thaelmann
-title: Ernst Thälmann (Leftist)
-subtitle: Will push radical police reforms - additional 5 leverage
+@appoint_thaelmann
+title: Ernst Thälmann
+subtitle: Leftist SPD - Additional 5 leverage required
 choose-if: leverage >= 5
-unavailable-subtitle: We do not have enough leverage.
-on-arrival: leverage -= 5; interior_minister = "Thälmann"; left_strength += 5
+on-arrival: leverage -= 5; interior_minister = "Thälmann"; left_faction_happiness += 20; police_reform_mandate = 1
 go-to: ministries
 
-Ernst Thälmann has been appointed Interior Minister.
-
-# Option 3: Cancel/Go Back
 @cancel_interior
-title: Cancel Appointment
-subtitle: We don't want to
+title: ← Cancel & Go Back
+subtitle: Return without appointing (refund 5 leverage)
 choose-if: true
-on-arrival: leverage += 5; interior_minister_party = "Z"
+on-arrival: interior_minister_party = ""; leverage += 5
 go-to: ministries
 
 @finance
