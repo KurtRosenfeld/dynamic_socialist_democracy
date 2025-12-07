@@ -3922,7 +3922,7 @@ on-arrival: |
 go-to: ministries
 
 
-@interior_thälmann
+@interior_thaelmann
 title: Appoint Thälmann
 subtitle: A Leftist who will push for police reforms.
 choose-if: leverage >= 10
