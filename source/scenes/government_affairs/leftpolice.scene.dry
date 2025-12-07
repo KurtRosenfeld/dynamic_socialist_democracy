@@ -15,6 +15,10 @@ As with the state police units and the Reichswehr, the internal police tends to 
 - @loyalty: Improve the loyalty of the Interior Ministry forces.
 - @investigate_corruption: Investigate corruption by big businesses.
 - @investigate_far_right: Investigate illegal activity among the <span style="color: #7A3C00;">far</span> <span style="color: #3E88B3;">right</span>.
+- @deport_hitler
+- @root: Take no action for now.
+- @easy_discard
+- @cancel_advisor_action
 
 @loyalty
 on-arrival: interior_police_loyalty += 0.1
