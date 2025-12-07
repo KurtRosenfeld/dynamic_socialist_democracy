@@ -1050,7 +1050,7 @@ With our resources, the <span style="color: #FFCC00;">**LVP**</span> are convinc
 
 @round2_thalmann
 view-if: spd_support_thalmann == 0 and kpd_support_spd == 0 and organizational_endorsements_seen
-choose-if: kpd_relation >= 50 and left_strength > reformist_strength 
+choose-if: left_strength > reformist_strength 
 unavailable-subtitle: [? if kpd_relation < 50 : We do not have good enough relations with the <span style="color: #700000;">Communists</span>, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 max-visits: 1
 
@@ -1220,11 +1220,9 @@ on-arrival: president = "Hindenburg"
 As expected, the incumbent Hindenburg wins the presidency. Let's hope he continues to keep the <span style="color: #7A3C00;">Nazis</span> out of power.
 
 @thalmann_wins
-on-arrival: president = "Thälmann"; kpd_relation = 80;
+on-arrival: president = "Thälmann";  president_ideology = "Left"; center_dissent -= 5; labor_dissent -= 5; left_dissent -= 15; left_strength += 20; workers_spd += 9*(1-dissent); unemployed_spd += 6*(1-dissent); coup_progress += 4; capital_strike_progress += 4
 
-Ernst Thälmann of the <span style="color: #700000;">**KPD**</span> has won the presidency. Immediately, the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> launches a coup attempt against the government. We have no choice but to unite with the <span style="color: #700000;">**KPD**</span> against the <span style="color: #7A3C00;">fascists</span>...
-
-- @civil_war: This is civil war.
+Ernst Thälmann of the [? if not left_split: <span style="color: #960000;">**SPD**</span>?][? if left_split: <span style="color: #9B0000;">**SAPD**</span>?] has won the presidency.  This is a moment of celebration for our party, and his victory is able to bolster our support.
 
 @hitler_wins
 on-arrival: president = nsdap_candidate_1932; chancellor = "Hitler"; chancellor_party = "NSDAP"
