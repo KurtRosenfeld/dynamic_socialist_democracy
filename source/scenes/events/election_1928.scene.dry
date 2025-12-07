@@ -3905,41 +3905,37 @@ go-to: ministries
 
 Rudolf Wissell of the <span style="color: #c00000;">**SPD**</span> has been appointed labor minister.
 
-@interior_claim
+@interior
 title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "SPD"
-on-arrival: leverage -=5; interior_minister_party = "SPD"
-go-to: choose_interior_minister
+on-arrival: leverage -= 5; interior_minister_party = "SPD"
+go-to: interior_minister_select
 
-# Step 2: Choose the minister
-@choose_interior_minister
+# Card 2: Choose minister (with descriptive text)
+@interior_minister_select
 title: Select Interior Minister
-subtitle: Who will lead our domestic security policy?
 tags: mins_1928
-new-page: true
-text: Now that we control the Interior Ministry, we must choose our minister
 
-@severing_choice
-title: Carl Severing (Reformist)
-subtitle: Severing is experienced and moderate
+Now that we control the Interior Ministry, we must choose our minister
+
+@choose_severing
+title: Carl Severing
+subtitle: Reformist SPD - No additional cost
 choose-if: true
 on-arrival: interior_minister = "Severing"
 go-to: ministries
 
-Carl Severing has been appointed Interior Minister.
-
-@thaelmann_choice
-title: Ernst Thälmann (Leftist)
-subtitle: Thälmann is a radical
-choose-if: true
-on-arrival: leverage -= 10; interior_minister = "Thälmann"; left_strength += 5
+@choose_thaelmann
+title: Ernst Thälmann
+subtitle: Leftist SPD - Additional 5 leverage cost
+choose-if: leverage >= 5
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: interior_minister = "Thälmann"; leverage -= 5
 go-to: ministries
-
-Ernst Thälmann has been appointed Interior Minister.
 
 @finance
 title: Finance Ministry
