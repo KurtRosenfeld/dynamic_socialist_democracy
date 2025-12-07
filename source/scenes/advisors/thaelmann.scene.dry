@@ -14,7 +14,11 @@ Thälmann
 - @root: Return to main
 
 @armworkers
-
+title: Arm Worker's Militias
+subtitle: Thälmann wants to give arms to workers.
+choose-if: true
+on-arrival: advisor_action_timer = 6; police_timer -= 6; last_advisor_action = 1
+go-to: arm_workers_militias
 
 @police_affairs
 title: Police affairs 
