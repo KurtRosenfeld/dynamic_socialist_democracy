@@ -3920,7 +3920,7 @@ go-to: interior_minister_choice
 title: Interior Minister Selection
 subtitle: Choose who will lead domestic security
 tags: mins_1928
-new-page: true  # Makes it feel like a pop-up/modal
+new-page: true
   
 We have claimed the Interior Ministry. Now we must choose our minister:
 
@@ -3930,7 +3930,7 @@ title: Carl Severing (Reformist)
 subtitle: Experienced SPD moderate - no additional cost
 choose-if: true
 on-arrival: interior_minister = "Severing"
-go-to: ministries  # Returns to main ministry selection
+go-to: ministries
 
 Carl Severing has been appointed Interior Minister.
 
