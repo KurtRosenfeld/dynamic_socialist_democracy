@@ -3920,7 +3920,7 @@ tags: mins_1928
 new-page: true
 text: We now control the Interior Ministry. Who should be minister?
 
-@interior_severing
+@choose_severing
 title: Appoint Carl Severing
 subtitle: A Reformist Social Democrat with experience in security matters.
 choose-if: leverage >= 5
@@ -3929,7 +3929,7 @@ go-to: ministries
 
 Carl Severing has been appointed interior minister.
 
-@interior_thaelmann
+@choose_thaelmann
 title: Appoint Thälmann
 subtitle: A Leftist who will push for police reforms.
 unavailable-subtitle: We do not have enough leverage.
