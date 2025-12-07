@@ -3910,32 +3910,25 @@ title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 5
-view-if: interior_minister_party != "SPD"
-on-arrival: leverage -= 5; interior_minister_party = "SPD"
-go-to: interior_minister_choice
 
-@interior_minister_choice
-title: Select Interior Minister
-tags: mins_1928
-new-page: true
-
-We have claimed the Interior Ministry for the SPD.
-<br><br>
-<strong>Choose who will lead domestic security:</strong>
+- @appoint_severing
+- @appoint_thaelmann
+- @cancel_interior
 
 @appoint_severing
 title: Carl Severing
 subtitle: Reformist SPD - No additional cost
 choose-if: true
-on-arrival: interior_minister = "Severing"; moderate_spd_support += 10
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: interior_minister = "Severing"; leverage -= 5; interior_minister_party = "SPD"
 go-to: ministries
 
 @appoint_thaelmann
 title: Ernst Thälmann
 subtitle: Leftist SPD - Additional 5 leverage required
 choose-if: leverage >= 5
-on-arrival: leverage -= 5; interior_minister = "Thälmann"; left_faction_happiness += 20; police_reform_mandate = 1
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: leverage -= 10; interior_minister = "Thälmann"; interior_minister_party = "SPD"
 go-to: ministries
 
 @cancel_interior
