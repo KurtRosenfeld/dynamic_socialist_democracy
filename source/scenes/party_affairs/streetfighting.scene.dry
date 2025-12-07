@@ -17,7 +17,7 @@ We must do something to protect the workers against these predations.
 - @if_training: Train union members to fight as part of the <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span>.
 - @prussian_police_training: Use the Prussian police to help train the Reichsbanner.
 - @peace: Try to avoid all militant confrontations, as much as possible.
-- @truce_rfb: Try to make peace with the <span style="color: #8B0000;">**RFB**</span>.
+- @truce_rfb: End conflicts with the <span style="color: #8B0000;">**Far Left**</span>.
 - @easy_discard
 
 @battle
@@ -53,13 +53,12 @@ The loyal sections of the Prussian police can help train the Reichsbanner.
 @peace
 on-arrival: rb_militancy -= 0.02; rb_strength -= 50; pacifism += 1
 
-By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the party are gaining the upper hand.
+We will try not to fight.
 
 @truce_rfb
-subtitle: The <span style="color: #8B0000;">RFB</span> will be added to the balance of power.
-choose-if: kpd_relation >= 45
-view-if: kpd_truce == 0
-unavailable-subtitle: The <span style="color: #700000;">KPD</span> is not interested.
-on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
+subtitle: The <span style="color: #8B0000;">Far Left Miltias</span> will be added to the balance of power.
+choose-if: workers_spd >=80
+unavailable-subtitle: We have pandered to the Right to much.
+on-arrival: kpd_truce = 1; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
 
-We have made at least a temporary truce with the <span style="color: #700000;">**KPD**</span>, so that our respective paramilitaries will stop fighting.
+We have forged an alliance wit the <span style="color: #700000;">**Far Left**</span>, so we can fight the <span style="color: #7A3C00;">**Fascists**</span>.
