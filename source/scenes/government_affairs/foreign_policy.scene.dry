@@ -66,7 +66,7 @@ The <span style="color: #940000;">Soviets</span> are asking for economic and dev
 
 - @soviet_economic_aid_yes_mil: Provide aid, in exchange for Reichswehr assistance.
 - @soviet_economic_aid_yes: Provide aid, in exchange for <span style="color: #DD6868;">Reichsbanner</span> Training.
-- @soviet_economic_aid_yo
+- @soviet_economic_aid_yo: Provide aid, in exchange for good relations only.
 - @soviet_economic_aid_no: Don't provide aid.
 
 @soviet_economic_aid_yes_mil
