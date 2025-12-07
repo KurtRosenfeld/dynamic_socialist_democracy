@@ -1782,7 +1782,7 @@ go-to: achievement_check_e
             {!<td style="background-color: rgba(191, 200, 204, 0.2); font-size: 0.85em;">!}[+ catholics_dnef_display +]%[? if n_elections != 1 and demo_change_catholics_dnef_display != 0 : ([+ demo_change_catholics_dnef_display +])?]{!</td>!}
         {!</tr>!}?]
         {!<tr>!}
-            {!<td><span style="color: #c00000;"><b>SPD</b></span></td>!}
+            {!<td><span style="color: #960000;"><b>SPD</b></span></td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ workers_spd_display +]%[? if n_elections != 1 and demo_change_workers_spd_display != 0 : ([+ demo_change_workers_spd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ new_middle_spd_display +]%[? if n_elections != 1 and demo_change_new_middle_spd_display != 0 : ([+ demo_change_new_middle_spd_display +])?]{!</td>!}
             {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em;">!}[+ old_middle_spd_display +]%[? if n_elections != 1 and demo_change_old_middle_spd_display != 0 : ([+ demo_change_old_middle_spd_display +])?]{!</td>!}
