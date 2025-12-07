@@ -3912,9 +3912,7 @@ unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 5
 view-if: interior_minister_party != "SPD"
-on-arrival: |
-  leverage -= 5
-  interior_minister_party = "SPD"
+on-arrival: leverage -=5; interior_minister_party = "SPD"
 go-to: choose_interior_minister
 
 # Step 2: Choose the minister
