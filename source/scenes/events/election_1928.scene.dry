@@ -3930,9 +3930,9 @@ Carl Severing has been appointed Interior Minister.
 @appoint_thaelmann
 title: Ernst Thälmann
 subtitle: Thälmann is a radical.
-choose-if: leverage >= 10
+choose-if: leverage >= 15
 unavailable-subtitle: We do not have enough leverage.
-on-arrival: leverage -= 10; interior_minister = "Thälmann"; interior_minister_party = "SPD";
+on-arrival: leverage -= 15; interior_minister = "Thälmann"; interior_minister_party = "SPD";
 go-to: ministries
 
 Ernst Thälmann has been appointed Interior Minister.
@@ -4175,10 +4175,17 @@ on-arrival: labor_minister_party = "Z"; labor_minister = "Stegerwald"; leverage 
 tags: drop_mins_1928
 go-to: ministries
 
-@drop_interior
+@drop_interior_severing
 title: Drop the Interior Ministry.
-view-if: interior_minister_party = "SPD"
+view-if: interior_minister = "Severing"
 on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 5;
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_interior_thaelmann
+title: Drop the Interior Ministry.
+view-if: interior_minister = "Thälmann"
+on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
 
