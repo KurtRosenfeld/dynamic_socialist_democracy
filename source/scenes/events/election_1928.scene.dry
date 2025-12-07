@@ -3911,12 +3911,9 @@ subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry 
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 
-- @interior_severing
-- @interior_thälmann
-
 @interior_severing
 title: Appoint Carl Severing
-subtitle: A moderate Social Democrat with experience in security matters.
+subtitle: A Reformist Social Democrat with experience in security matters.
 choose-if: leverage >= 5
 on-arrival: |
   leverage -= 5;
@@ -3927,7 +3924,7 @@ go-to: ministries
 
 @interior_thälmann
 title: Appoint Thälmann
-subtitle: A more radical choice who will push for police reforms.
+subtitle: A Leftist who will push for police reforms.
 choose-if: leverage >= 10
 on-arrival: |
   leverage -= 10;
