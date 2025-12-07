@@ -63,7 +63,7 @@ Q.dissent_percent = 5;
 // factions
 Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist', 'social_patriot'];
 // should this be normalized to 100%?
-Q.left_strength = 35;
+Q.left_strength = 30;
 Q.left_dissent = 0;
 Q.center_strength = 40;
 Q.center_dissent = 0;
@@ -209,7 +209,7 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.budget = 4;
+Q.budget = 6;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
@@ -998,6 +998,7 @@ Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;
 Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
 Q.seydewitz_advisor = 0; // Max Seydewitz
+Q.thaelmann_advisor = 0 // Ernst Thälmann
 
 // centrist alternate advisors
 Q.pfulf_advisor = 0; // Antonie Pfülf
