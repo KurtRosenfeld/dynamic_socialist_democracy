@@ -1915,7 +1915,6 @@ go-to: achievement_check_e
 
 **Potential coalitions:**
 
-[? if kpd_relation >= 40 and left_coalition >= 45: United Left Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span>[? if sapd_formed:  + <span style="color: #9B0000;">**SAPD**</span>?]): [+ left_coalition +]% ?]
 
 [? if kpd_relation > 35 and z_relation > 35 and not cvp_formed: Popular Front Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #700000;">**KPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span>[? if (liberal_parliament == 0 and bourgeois_parliament_ddp == 0) and not lvp_formed:&nbsp;+ <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if sapd_formed:&nbsp;+ <span style="color: #9B0000;">**SAPD**</span>?]): [+ popular_front_coalition +]% ?]
 
@@ -2851,7 +2850,6 @@ President [+ president +] faces a dilemma. He desperately desires a <span style=
 
 - @emergency_braun: We will form an emergency government with [+ president +]'s support.
 - @new_elections: We will have new elections.
-- @left_coalition
 - @popular_front_coalition
 - @far_right_coalition
 
