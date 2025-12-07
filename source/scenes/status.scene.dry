@@ -59,8 +59,6 @@ Reichstag composition:
 [? if sapd_formed and sapd_r > 0: <span class="tooltip-text" title="Socialist Workers' Party of Germany" style="color: #9B0000;">**SAPD**</span>: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
 [? if started: [? if z_party_name != "CVP": <span class="tooltip-text" title="Center Party + Bavarian People's Party"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party + Bavarian People's Party"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>?]?][? if not started: <span class="tooltip-text" title="Center Party + Bavarian People's Party"><span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span></span> ?]: [+ z_r +]%
-# 1928: 10, 1930: 13
-<span class="tooltip-text" title="Communist Party of Germany" style="color: #700000;">**KPD**</span>: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DStP)
 [? if lvp_formed: <span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [+ lvp_r +]% ?]
 [? if (not lvp_formed or not ddp_name) : [? if not ddp_name:<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**DDP**</span>?][? if ddp_name = "DDP":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>?][? if ddp_name = "DStP":<span class="tooltip-text" title="German State Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>?]: [+ ddp_r +]% ?]
@@ -259,7 +257,7 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 <span style="color: #DD6868;">**Reichsbanner**</span> Militarization: [+ rb_militancy : militancy +]
 
-<span class="tooltip-text" title="Far Left militias are loosely assoicated with us." style="color: #8B0000;">**RFB**</span> Strength: [+ rfb_strength_2 +] thousand
+<span class="tooltip-text" title="Far Left militias are loosely assoicated with us." style="color: #8B0000;">**Far Left Militias**</span> Strength: [+ rfb_strength_2 +] thousand
 
 <span style="color: #8B0000;">**Far Left Militias**</span> Militarization: [+ rfb_militancy : militancy +]
 
@@ -279,7 +277,7 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 [? if year >= 1930 and not streetfighting_joever and prussia_leader != "Papen" and prussia_leader != "Schleicher" and prussia_leader != "Strasser": <b>Prussian police: [+ prussia_force +]%</b>?]
 
-[? if year >= 1930 and not streetfighting_joever and kpd_truce: <span style="color: #8B0000;">**RFB**</span>: [+ rfb_force +]%?]
+[? if year >= 1930 and not streetfighting_joever and kpd_truce: <span style="color: #8B0000;">**Far Left Militias**</span>: [+ rfb_force +]%?]
 
 [? if year >= 1930 and not streetfighting_joever: <h4><span style="color: #7A3C00;">Far</span>-<span style="color: #3E88B3;">right</span> strength: [+ far_right_force +]%</h4>?]
 
@@ -287,7 +285,7 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 [? if year >= 1930 and not streetfighting_joever: <span style="color: #3E88B3;">**Stahlhelm**</span>: [+ sh_force +]%?]
 
-[? if year >= 1930 and not streetfighting_joever and not kpd_truce: <span style="color: #8B0000;">**RFB**</span>: [+ rfb_force +]%?]
+[? if year >= 1930 and not streetfighting_joever and not kpd_truce: <span style="color: #8B0000;">**Far Left Militias**</span>: [+ rfb_force +]%?]
 
 [? if year >= 1930 and not streetfighting_joever and (prussia_leader == "Papen" or prussia_leader == "Schleicher" or prussia_leader == "Strasser") or reichswehr_street: <h4><span style="color: #BFC8CC;">**State**</span> strength: [+ state_force +]%</h4>?]
 
