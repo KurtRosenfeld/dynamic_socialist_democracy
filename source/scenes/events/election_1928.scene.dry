@@ -3911,10 +3911,9 @@ subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry 
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 
-# Main condition to see the card
-view-if: interior_minister_party != "SPD"
+- @interior_severing
+- @interior_thälmann
 
-# Choice 1: Appoint Severing
 @interior_severing
 title: Appoint Carl Severing
 subtitle: A moderate Social Democrat with experience in security matters.
@@ -3925,9 +3924,9 @@ on-arrival: |
   interior_minister = "Severing";
 go-to: ministries
 
-# Choice 2: Appoint Thälmann
-@interior_minister_t
-title: Appoint Minister T
+
+@interior_thälmann
+title: Appoint Thälmann
 subtitle: A more radical choice who will push for police reforms.
 choose-if: leverage >= 10
 on-arrival: |
