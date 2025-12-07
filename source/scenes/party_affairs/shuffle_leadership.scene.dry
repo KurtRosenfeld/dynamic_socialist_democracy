@@ -540,8 +540,8 @@ title: Ernst Thälmann
 subtitle: Ernst Thälmann is one of the most important organizers in Hamburg and Prussia.
 is-card: true
 card-image: img/portraits/ThälmannErnst.jpg
-view-if: thälmann_advisor = 0 and n_advisors < 5 and left_split = 0
-on-arrival: rosenfeld_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
+view-if: thaelmann_advisor = 0 and n_advisors < 5 and left_split = 0
+on-arrival: thaelmann_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
 go-to: advisor_menu
 tags: left_advisor
 
