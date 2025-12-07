@@ -3910,12 +3910,31 @@ title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 5
+
+# Main condition to see the card
 view-if: interior_minister_party != "SPD"
-on-arrival: leverage -= 5; interior_minister_party = "SPD"; interior_minister = "Severing"
+
+# Choice 1: Appoint Severing
+@interior_severing
+title: Appoint Carl Severing
+subtitle: A moderate Social Democrat with experience in security matters.
+choose-if: leverage >= 5
+on-arrival: |
+  leverage -= 5;
+  interior_minister_party = "SPD";
+  interior_minister = "Severing";
 go-to: ministries
 
-Carl Severing of the <span style="color: #c00000;">**SPD**</span> has been appointed Interior Minister.
+# Choice 2: Appoint Thälmann
+@interior_minister_t
+title: Appoint Minister T
+subtitle: A more radical choice who will push for police reforms.
+choose-if: leverage >= 10
+on-arrival: |
+  leverage -= 10;
+  interior_minister_party = "SPD";
+  interior_minister = "Thälmann";
+go-to: ministries
 
 @finance
 title: Finance Ministry
