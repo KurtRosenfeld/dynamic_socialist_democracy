@@ -4065,3 +4065,52 @@ go-to: ministries
 Letting the <span style="color: #C0A054;">**DVP**</span> into the Prussian government is an offer too good for them to refuse, no matter their leadership. However, this will negatively impact our actions involving the Prussian police force due to the <span style="color: #C0A054;">**DVP**</span> has ties to right-wing organizations such as the <span style="color: #3E88B3;">Stahlhelm</span>.
 
 The [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] also is against this change because of the <span style="color: #C0A054;">**DVP**</span>'s opposition to a Prussian concordat.
+
+
+
+
+
+
+
+
+
+@election_1928.left_coalition
+title: Left Coalition Option
+subtitle: Forming a left-wing coalition
+go-to: coalition_menu
+
+This would be a coalition with left-wing parties. The option is currently not available.
+
+@vote_of_no_confidence_joever.support_kpd_grand
+title: Support KPD in Grand Coalition
+subtitle: Vote of no confidence option
+go-to: coalition_menu
+
+This option would support KPD participation in a grand coalition.
+
+@vote_of_no_confidence_joever.support_kpd_weimar
+title: Support KPD in Weimar Coalition
+subtitle: Vote of no confidence option  
+go-to: coalition_menu
+
+This option would support KPD participation in a Weimar coalition.
+
+@prussian_coalition_formation
+title: Prussian Coalition Formation
+subtitle: Negotiate the Prussian state government
+on-arrival: prussia_negotiations_trigger = 0
+
+We must now form a coalition government in Prussia. The composition will depend on our federal arrangements and party relations.
+
+- @ministries: Return to federal ministries
+- @coalition_menu: Return to federal coalition options
+
+@prussia_election_1928
+title: Prussian Election 1928
+subtitle: Prussian state government formation
+go-to: kpd_goals_prussia if kpd_goals_seen_prussia == 0; prussian_coalition_formation
+
+The Prussian state election results require us to form a new government in Prussia.
+
+- @kpd_goals_prussia: Review KPD demands
+- @prussian_coalition_formation: Form Prussian coalition
