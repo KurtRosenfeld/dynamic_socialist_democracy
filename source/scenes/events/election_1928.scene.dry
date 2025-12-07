@@ -3910,7 +3910,7 @@ title: Interior Ministry
 subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
 unavailable-subtitle: We do not have enough leverage.
 choose-if: leverage >= 5
-view-if: labor_minister_party != "SPD"
+view-if: interior_minister_party != "SPD"
 tags: mins_1928
 
 - @appoint_severing
@@ -3925,6 +3925,8 @@ unavailable-subtitle: We do not have enough leverage.
 on-arrival: interior_minister = "Severing"; leverage -= 5; interior_minister_party = "SPD"
 go-to: ministries
 
+Carl Severing has been appointed Interior Minister.
+
 @appoint_thaelmann
 title: Ernst Thälmann
 subtitle: Thälmann is a radical.
@@ -3932,6 +3934,8 @@ choose-if: leverage >= 10
 unavailable-subtitle: We do not have enough leverage.
 on-arrival: leverage -= 10; interior_minister = "Thälmann"; interior_minister_party = "SPD";
 go-to: ministries
+
+Ernst Thälmann has been appointed Interior Minister.
 
 @cancel_interior
 title: ← Cancel & Go Back
