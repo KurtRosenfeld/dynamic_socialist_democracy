@@ -14,6 +14,7 @@ Wels is the long-time chairman of the <span style="color: #c00000;">**SPD**</spa
 - @emergency_fundraising
 - @money_printer
 - @stimulation
+- @military_affaires
 - @snap_election
 - @root: Return to main
 
@@ -76,6 +77,14 @@ if (Q.stimulation) {
 !}
 
 Ok.
+
+@military_affairs
+title: Military affairs
+subtitle: We can set our military policy.
+choose-if: advisor_action_timer == 0 and spd_in_government and reichswehr_minister == "Wels"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not in government. ?][? if reichswehr_minister != "Wels": Wels is not the Reichswehr Minister. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+go-to: military_policy
 
 @snap_election
 title: Snap Election
