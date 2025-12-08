@@ -2962,24 +2962,24 @@ view-if: not historical_mode or not prussia_leader = "Braun"
 on-arrival: chancellor = "Braun"
 
 [? if president == "Braun": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Reichstag; there is no law saying that the Chancellor must be a member of the Reichstag). Thus, we have Chancellor-President Otto Braun. ?]
-[? if president != "Braun": Otto Braun has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority. ?]
+[? if president != "Braun": Otto Braun has become chancellor of the <span style="color: #960000;">**SPD**</span> majority. ?]
 
 @breitscheid_majority_chancellor
 on-arrival: chancellor = "Breitscheid"
 
-Rudolf Breitscheid has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority.
+Rudolf Breitscheid has become chancellor of the <span style="color: #960000;">**SPD**</span> majority.
 
 @muller_majority_chancellor
 view-if: muller_dead = 0
 on-arrival: chancellor = "Müller"
 
-Hermann Müller has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority.
+Hermann Müller has become chancellor of the <span style="color: #960000;">**SPD**</span> majority.
 
 @wels_majority_chancellor
 view-if: muller_dead = 1
 on-arrival: chancellor = "Wels"
 
-Otto Wels has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority.
+Otto Wels has become chancellor of the <span style="color: #960000;">**SPD**</span> majority.
 
 
 @brauns_dilemma
@@ -3002,7 +3002,7 @@ title: We will form an emergency government with [+ president +]'s support.
 subtitle: This may have the effect of inflamming public sentiment against us, and the <span style="color: #808080;">reactionaries</span> will be against us each step of the way.
 on-arrival: sa_strength += 100; sh_strength += 100; in_emergency_government = 1; ddp_relation -= 5; lvp_relation -= 5; dvp_relation -= 5; z_relation -= 5; ddp_right += 1; ddp_cohesion -= 0.5; dvp_right += 3; lvp_right += 1; bourgeois_cooperation += 5; liberal_cooperation += 3
 
-Yes, an emergency minority government, with the support of the <span style="color: #c00000;">**SPD**</span>. Who should lead this emergency minority government?
+Yes, an emergency minority government, with the support of the <span style="color: #960000;">**SPD**</span>. Who should lead this emergency minority government?
 
 - @braun_emergency_chancellor: Otto Braun for Chancellor[? if president == "Braun":-President?]!
 - @breitscheid_emergency_chancellor: Rudolf Breitscheid for emergency Chancellor.
@@ -3930,9 +3930,9 @@ Carl Severing has been appointed Interior Minister.
 @appoint_thaelmann
 title: Ernst Thälmann
 subtitle: Thälmann is a radical.
-choose-if: leverage >= 15
+choose-if: leverage >= 20
 unavailable-subtitle: We do not have enough leverage.
-on-arrival: leverage -= 15; interior_minister = "Thälmann"; interior_minister_party = "SPD";
+on-arrival: leverage -= 20; interior_minister = "Thälmann"; interior_minister_party = "SPD"; left_strength += 5
 go-to: ministries
 
 Ernst Thälmann has been appointed Interior Minister.
@@ -3999,11 +3999,38 @@ subtitle: This is not our usual domain.
 unavailable-subtitle: [? if leverage < 10: We do not have enough leverage. ?] [? if cvp_ministers_accepted: Our coalition agreement stipulates that we must forfeit the Agricultural Ministry. ?]
 choose-if: leverage >= 10 and not cvp_ministers_accepted
 view-if: agriculture_minister_party != "SPD"
-on-arrival: leverage -= 10; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"
-go-to: ministries
 tags: mins_1928
 
+- @appoint_baade
+- @appoint_braun_ag
+- @cancel_agriculture
+
+@appoint_baade
+title: Fritz Baade
+subtitle: Baade is one of our few experts in the field.
+choose-if: leverage >= 10
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: agriculture_minister = "Baade"; leverage -= 10; agricluture_minister_party = "SPD"
+go-to: ministries
+
 Fritz Baade of the <span style="color: #c00000;">**SPD**</span> has been appointed Agriculture Minister.
+
+@appoint_braun_ag
+title: Otto Braun
+subtitle: Braun is a pationate hunter who used to occupy the Agriculture Ministry in Prussia.
+choose-if: leverage >= 10
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: agriculture_minister = "Braun"; leverage -= 10; agricluture_minister_party = "SPD"
+go-to: ministries
+
+Otto Braun of the <span style="color: #c00000;">**SPD**</span> has been appointed Agriculture Minister.
+
+@cancel_agriculture
+title: ← Cancel & Go Back
+subtitle: Return without appointing
+choose-if: true
+on-arrival: agriculture_minister_party = "Z";
+go-to: ministries
 
 @reichswehr
 title: Reichswehr Ministry
@@ -4015,8 +4042,58 @@ view-if: reichswehr_minister_party != "SPD"
 on-arrival: leverage -= 15; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; hindenburg_angry += 10
 go-to: ministries
 
+- @appoint_leber
+- @appoint_braun_rw
+- @appoint_wels
+- @cancel_reichswehr
+
+@appoint_leber
+title: Julius Leber
+subtitle: Leber is moderate.
+choose-if: leverage >= 15
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: reichswehr_minister = "Leber"; leverage -= 15; reichswehr_minister_party = "SPD"; hindenburg_angry += 10
+go-to: ministries
+
 Julius Leber of the <span style="color: #c00000;">**SPD**</span> has been appointed Reichswehr Minister.
 
+@appoint_braun_rw
+title: Otto Braun
+subtitle: Braun is moderate.
+view-if: prussia_leader != "Braun"
+choose-if: leverage >= 15
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: reichswehr_minister = "Braun"; leverage -= 10; reichswehr_minister_party = "SPD"; hindenburg_angry += 10
+go-to: ministries
+
+Otto Braun of the <span style="color: #c00000;">**SPD**</span> has been appointed Reichswehr Minister.
+
+@appoint_wels
+title: Otto Wels
+subtitle: Wels is moderate.
+choose-if: leverage >= 15
+unavailable-subtitle: We do not have enough leverage.
+on-arrival: reichswehr_minister = "Wels"; leverage -= 15; reichswehr_minister_party = "SPD"; hindenburg_angry += 10
+go-to: ministries
+
+Otto Wels of the <span style="color: #c00000;">**SPD**</span> has been appointed Reichswehr Minister.
+
+@cancel_reichswehr
+title: ← Cancel & Go Back
+subtitle: Return without appointing
+choose-if: true
+on-arrival: agriculture_minister_party = "I";
+go-to: ministries
+
+@transport
+title: Transport Ministry
+subtitle: The Ministry for Transport
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 10 and not cvp_ministers_accepted
+view-if: transport_minister_party != "SPD"
+on-arrival: leverage -= 10; transport_minister_party = "SPD"; transport_minister = "Leber"
+go-to: ministries
 
 @no_more
 title: No more ministries.
@@ -4137,6 +4214,7 @@ const ministries = [
     "economic_minister_party",
     "finance_minister_party",
     "agriculture_minister_party"
+    "transport_minister_party"
 ];
 
 ministries.forEach(ministry => {
@@ -4185,7 +4263,7 @@ go-to: ministries
 @drop_interior_thaelmann
 title: Drop the Interior Ministry.
 view-if: interior_minister = "Thälmann"
-on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 15;
+on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 20; left_strength -= 5
 tags: drop_mins_1928
 go-to: ministries
 
@@ -4228,6 +4306,13 @@ go-to: ministries
 title: Drop the Reichswehr Ministry.
 view-if: reichswehr_minister_party = "SPD"
 on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15; hindenburg_angry -= 10
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_transport
+title: Drop the Transport Ministry
+view-if: transport_minister_party = "SPD"
+on-arrival: transport_minister_party = "BVP"; foreign_minister_party = "CVP" if lvp_formed; foreign_minister = "Schätzel"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
