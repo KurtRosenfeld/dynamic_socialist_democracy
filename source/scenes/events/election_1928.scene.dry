@@ -3932,7 +3932,7 @@ title: Ernst Thälmann
 subtitle: Thälmann is a radical.
 choose-if: leverage >= 20
 unavailable-subtitle: We do not have enough leverage.
-on-arrival: leverage -= 20; interior_minister = "Thälmann"; interior_minister_party = "SPD"; left_strength += 5
+on-arrival: leverage -= 20; interior_minister = "Thaelmann"; interior_minister_party = "SPD"; left_strength += 5
 go-to: ministries
 
 Ernst Thälmann has been appointed Interior Minister.
@@ -4259,7 +4259,7 @@ go-to: ministries
 
 @drop_interior_thaelmann
 title: Drop the Interior Ministry.
-view-if: interior_minister = "Thälmann"
+view-if: interior_minister = "Thaelmann"
 on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 20; left_strength -= 5
 tags: drop_mins_1928
 go-to: ministries
