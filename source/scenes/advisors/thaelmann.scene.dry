@@ -24,6 +24,6 @@ go-to: arm_workers_militias
 title: Police affairs 
 subtitle: We can set our police policy. 
 choose-if: advisor_action_timer == 0 and spd_in_government and interior_minister == "Thaelmann"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not in government. ?][? if interior_minister != "Thälmann": Thälmann does not have the Interior ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The <span style="color: #c00000;">SPD</span> is not in government. ?][? if interior_minister != "Thaelmann": Thälmann is not the Interior Minister. ?]
 on-arrival: advisor_action_timer = 6; police_timer -= 6; last_advisor_action = 1
 go-to: leftpolice
