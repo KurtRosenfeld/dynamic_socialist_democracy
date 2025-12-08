@@ -4010,7 +4010,7 @@ title: Fritz Baade
 subtitle: Baade is one of our few experts in the field.
 choose-if: leverage >= 10
 unavailable-subtitle: We do not have enough leverage.
-on-arrival: agriculture_minister = "Baade"; leverage -= 10; agricluture_minister_party = "SPD"
+on-arrival: agriculture_minister = "Baade"; leverage -= 10; agriculture_minister_party = "SPD"
 go-to: ministries
 
 Fritz Baade of the <span style="color: #c00000;">**SPD**</span> has been appointed Agriculture Minister.
@@ -4020,7 +4020,7 @@ title: Otto Braun
 subtitle: Braun is a pationate hunter who used to occupy the Agriculture Ministry in Prussia.
 choose-if: leverage >= 10
 unavailable-subtitle: We do not have enough leverage.
-on-arrival: agriculture_minister = "Braun"; leverage -= 10; agricluture_minister_party = "SPD"
+on-arrival: agriculture_minister = "Braun"; leverage -= 10; agriculture_minister_party = "SPD"
 go-to: ministries
 
 Otto Braun of the <span style="color: #c00000;">**SPD**</span> has been appointed Agriculture Minister.
@@ -4061,7 +4061,7 @@ subtitle: Braun is moderate.
 view-if: prussia_leader != "Braun"
 choose-if: leverage >= 15
 unavailable-subtitle: We do not have enough leverage.
-on-arrival: reichswehr_minister = "Braun"; leverage -= 10; reichswehr_minister_party = "SPD"; hindenburg_angry += 10
+on-arrival: reichswehr_minister = "Braun"; leverage -= 15; reichswehr_minister_party = "SPD"; hindenburg_angry += 10
 go-to: ministries
 
 Otto Braun of the <span style="color: #c00000;">**SPD**</span> has been appointed Reichswehr Minister.
@@ -4080,7 +4080,7 @@ Otto Wels of the <span style="color: #c00000;">**SPD**</span> has been appointed
 title: ← Cancel & Go Back
 subtitle: Return without appointing
 choose-if: true
-on-arrival: agriculture_minister_party = "I";
+on-arrival: reichswehr_minister_party = "I";
 go-to: ministries
 
 @transport
