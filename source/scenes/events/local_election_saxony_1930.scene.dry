@@ -733,7 +733,7 @@ Saxony, once a stronghold of <span style="color: #c00000;">socialism</span> and 
 However, there is a real possibility that Strasser could be removed from his position by his coalition partners, as they were never a huge fan of him.
 
 @true_bourgeois_coalition_saxony
-title: The Schieck government has garnered a majority to rule via parliament.
+title: The Schieck government has garnered a majority to rule via parliament. We have lost Saxony.
 subtitle: The bourgeois parties have survived the onslaught from the <span style="color: #7A3C00;">Nazis</span>, at least for now.
 view-if: true_bourgeois_coalition_saxony >= 50
 on-arrival: saxony_right_2 = 1; pro_republic += 2; rural_nsdap -= 2; old_middle_nsdap -= 2; rural_other += 2 if dnvp_ideology == "Radical"; old_middle_other += 2 if dnvp_ideology == "Radical"; rural_dnvp += 2 if dnvp_ideology == "Moderate"; old_middle_dnvp += 2 if dnvp_ideology == "Moderate"
@@ -798,8 +798,8 @@ With no viable alternatives, the Landtag faces dissolution, triggering new elect
 
 @spd_majority
 title: Form an SPD only goverment!
-subtitle: Sweat...
+subtitle: This is the incumbent coalition.
 view-if: spd_r_saxony >= 50 
-on-arrival: saxony_spd = 1; reformist_dissent -= 5; left_dissent -= 30; left_strength += 10; center_dissent -= 10; labor_dissent -= 10; aspd_dead = 1; workers_spd += 7; workers_kpd -= 4; new_middle_spd += 3; old_middle_spd += 2; unemployed_spd += 4; unemployed_nsdap -=3; pro_republic += 5
+on-arrival: saxony_spd = 1; reformist_dissent -= 5; left_dissent -= 20; left_strength += 4; center_dissent -= 8; labor_dissent -= 10; aspd_dead = 1; workers_spd += 6; new_middle_spd += 3; old_middle_spd += 2; unemployed_spd += 4; unemployed_nsdap -=3; pro_republic += 5; rural_spd += 1
 
 Unexpectedly, we've found ourselves controlling a majority of the Saxony landtag and being able to form a goverment of just the <span style="color: #c00000;">**SPD**</span>! It is unclear how the bourgeois and <span style="color: #808080;">reactionaries</span> will react to a <span style="color: #c00000;">Red</span> Saxony but without the communists... [? if aspd_share > 0: The ASPD seeing as we no longer require on coalition negoations to form goverment has decided to join us. ?] 
