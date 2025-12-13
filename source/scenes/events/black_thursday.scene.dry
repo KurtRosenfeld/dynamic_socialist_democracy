@@ -37,4 +37,6 @@ on-arrival: crisis_urgency += 1; workers_spd += 2; unemployed_spd += 2
 What can we do to staunch the workers' suffering? It is becoming a hotly debated question.
 
 @told_ya
-on-arrival: crisis_urgency += 1; rural_spd += 1; workers_spd += 2; unemployed_spd += 2; new_middle_spd += 1(*dissent); z_relation -= 2; dvp_relation -= 5
+on-arrival: crisis_urgency += 1; rural_spd += 1; workers_spd += 2; unemployed_spd += 2; new_middle_spd += 1(*1 - dissent); z_relation -= 2; dvp_relation -= 5
+
+We have warned for long time of what capitalism will do. Now we can't let it live on.
